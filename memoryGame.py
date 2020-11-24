@@ -19,6 +19,7 @@ pygame.display.set_icon(icon)
 # player_img = pygame.transform.scale(icon, (100, 100))
 
 class Character:
+    '''used for anything that can be drawn to the screen and potentially clicked'''
     def __init__(self, x, y, width, height, image,\
                  speed = 5, color=(255,255,255)):
         self.x = x
@@ -88,6 +89,7 @@ def makePattern(board):
     return board
 
 def checkAnswer(curDimension, board):
+    '''check if what the user has entered is correct'''
     isComplete = True
     for y in range(curDimension):
         for x in range(curDimension):
